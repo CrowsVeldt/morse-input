@@ -1,8 +1,9 @@
 import { StyleSheet } from "react-native";
 import AccelExample from "./AccelExample";
-
+import parseMorse from "./parseMorse";
 
 export default function App() {
+  parseMorse() 
   return <AccelExample />;
 }
 
