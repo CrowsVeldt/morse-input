@@ -1,0 +1,32 @@
+x = count of 1
+Dot = x
+Dash = 3x
+Space between parts of the same letter = x
+Space between letters: 3x
+Space between words: 7x
+
+-----
+
+Tap Parser (TP)
+- Track accelerometer input
+- Process data
+- Stream data to MP if activation command is recognized
+- Use default polling frequency in standby mode, switch to high speed polling when activated?
+
+- - How to distinguish taps?
+- - - A spike of accel, possibly followed by a rebound?
+- - - How to distinguish a tap from the space between taps?
+- - - How to distinguish a dash from a dot?
+
+-----
+
+Morse Parser (MP)
+- Receive tap data from TP
+- Parse as morse code, via the length of taps and the spaces between them
+- If a command is recognized stream data from that command (inclusive) to HQ
+
+- - Tapping will not be perfectly uniform, or even consistant. How to allow for natural variation?
+
+-----
+
+
